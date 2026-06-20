@@ -1,7 +1,7 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>Welcome to the Registration Portal</h1>
-    <p>Kindly provide the required details to complete your registration successfully.!!!</p>
+    <h1>Election Commission Registration Portall</h1>
+    <p>Please enter your information carefully. All submitted details will be used for voter registration.!!!</p>
     <hr>
     <br>  
 
