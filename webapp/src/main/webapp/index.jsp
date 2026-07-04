@@ -1,132 +1,162 @@
-<form action="action_page.php">
-  <div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mumbai Airport Immigration System</title>
 
-    <h1 style="color:darkblue; text-align:center;">
-        ✈ Welcome to Chhatrapati Shivaji Maharaj International Airport - Mumbai
-    </h1>
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: url("https://images.unsplash.com/photo-1509062522246-3755977927d7") no-repeat center center fixed;
+    background-size: cover;
+}
 
-    <h2 style="color:red; text-align:center;">
-        🌍 International Passenger Immigration Registration Portal
-    </h2>
+/* overlay */
+.overlay {
+    background: rgba(0,0,0,0.6);
+    min-height: 100vh;
+    padding: 20px;
+}
 
-    <marquee style="background:yellow; color:red; font-weight:bold;">
-        🔔 Welcome to Mumbai Airport | Please keep your Passport & Visa ready for Verification | Have a Safe Journey ✈
-    </marquee>
+/* container */
+.container {
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
 
-    <hr>
+/* header */
+h1 {
+    text-align: center;
+    background: linear-gradient(90deg, #0044cc, #00ccff);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
 
-    <label><b>Passenger Full Name</b></label>
-    <input type="text" placeholder="Enter Full Name" required><br>
+/* inputs */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+}
 
-    <label><b>Father's Name</b></label>
-    <input type="text" placeholder="Enter Father's Name" required><br>
+/* button */
+button {
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 10px;
+}
 
-    <label><b>Mother's Name</b></label>
-    <input type="text" placeholder="Enter Mother's Name" required><br>
+button[type="submit"] {
+    background: green;
+    color: white;
+}
 
-    <label><b>Date of Birth</b></label>
-    <input type="date" required><br>
+button.print {
+    background: orange;
+    color: white;
+}
 
-    <label><b>Gender</b></label>
-    <select>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-    </select><br><br>
+/* ticket */
+.ticket {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #333;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
 
-    <label><b>Nationality</b></label>
-    <input type="text" placeholder="Enter Nationality" required><br>
+/* plane animation */
+.plane {
+    position: fixed;
+    top: 80px;
+    left: -200px;
+    font-size: 50px;
+    animation: fly 8s linear infinite;
+}
 
-    <label><b>Passport Number</b></label>
-    <input type="text" placeholder="Enter Passport Number" required><br>
+@keyframes fly {
+    0% { left: -200px; top: 80px; }
+    50% { top: 200px; }
+    100% { left: 110%; top: 80px; }
+}
+</style>
+</head>
 
-    <label><b>Visa Number</b></label>
-    <input type="text" placeholder="Enter Visa Number" required><br>
+<body>
 
-    <label><b>Flight Number</b></label>
-    <input type="text" placeholder="AI-302" required><br>
+<div class="plane">✈️</div>
 
-    <label><b>Arrival Date</b></label>
-    <input type="date" required><br>
+<div class="overlay">
 
-    <label><b>Arrival Time</b></label>
-    <input type="time" required><br>
+<div class="container">
 
-    <label><b>Terminal</b></label>
-    <select>
-        <option>T1</option>
-        <option>T2</option>
-    </select><br><br>
+<h1>✈ Chhatrapati Shivaji Maharaj International Airport - Mumbai</h1>
 
-    <label><b>Seat Number</b></label>
-    <input type="text" placeholder="12A" required><br>
+<form id="form">
 
-    <label><b>Baggage Weight (KG)</b></label>
-    <input type="number" placeholder="20" required><br>
+<label>Name</label>
+<input type="text" id="name" required>
 
-    <label><b>Mobile Number</b></label>
-    <input type="tel" placeholder="+91 XXXXXXXXXX" required><br>
+<label>Flight Number</label>
+<input type="text" id="flight" required>
 
-    <label><b>Email Address</b></label>
-    <input type="email" placeholder="Enter Email Address" required><br>
+<label>Destination</label>
+<input type="text" id="dest" required>
 
-    <label><b>Purpose of Visit</b></label>
-    <select>
-        <option>Tourism</option>
-        <option>Business</option>
-        <option>Medical</option>
-        <option>Education</option>
-        <option>Employment</option>
-    </select><br><br>
+<label>Seat Number</label>
+<input type="text" id="seat" required>
 
-    <label><b>Hotel / Local Address</b></label>
-    <textarea rows="4" cols="40" placeholder="Enter Address"></textarea><br><br>
+<button type="submit">🛫 Generate Boarding Pass</button>
+<button type="reset">Reset</button>
 
-    <label><b>Emergency Contact Number</b></label>
-    <input type="tel" placeholder="+91 XXXXXXXXXX"><br>
+</form>
 
-    <label><b>Upload Passport Copy</b></label>
-    <input type="file"><br><br>
+<div class="ticket" id="ticketBox">
+    <h2>🎫 Boarding Pass</h2>
+    <p id="tname"></p>
+    <p id="tflight"></p>
+    <p id="tdest"></p>
+    <p id="tseat"></p>
 
-    <label><b>Upload Visa Copy</b></label>
-    <input type="file"><br><br>
-
-    <input type="checkbox" required>
-    I declare that all the above information is true.
+    <img id="qr" width="120">
 
     <br><br>
+    <button class="print" onclick="window.print()">🖨 Print Ticket</button>
+</div>
 
-    <button type="submit">🛫 Submit Registration</button>
-    <button type="reset">Reset Form</button>
+</div>
+</div>
 
-    <hr>
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
 
-    <h2 style="color:green;">⭐ Airport Premium Services ⭐</h2>
+    let name = document.getElementById("name").value;
+    let flight = document.getElementById("flight").value;
+    let dest = document.getElementById("dest").value;
+    let seat = document.getElementById("seat").value;
 
-    <ul>
-        <li>🛄 Smart Baggage Tracking</li>
-        <li>☕ Premium Lounge Access</li>
-        <li>📶 Unlimited Free Wi-Fi</li>
-        <li>🚖 Airport Taxi Booking</li>
-        <li>💱 Currency Exchange Counter</li>
-        <li>🛍️ Duty Free Shopping</li>
-        <li>🍽️ Food Court & Restaurants</li>
-        <li>🩺 24x7 Medical Assistance</li>
-    </ul>
+    document.getElementById("ticketBox").style.display = "block";
 
-    <hr>
+    document.getElementById("tname").innerText = "Passenger: " + name;
+    document.getElementById("tflight").innerText = "Flight: " + flight;
+    document.getElementById("tdest").innerText = "Destination: " + dest;
+    document.getElementById("tseat").innerText = "Seat: " + seat;
 
-    <h2 style="color:purple;">
-        🎉 Thank You for Visiting Mumbai International Airport 🎉
-    </h2>
+    // QR Code (simple API)
+    document.getElementById("qr").src =
+    "https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=" +
+    name + "-" + flight + "-" + dest + "-" + seat;
+});
+</script>
 
-    <h3 style="color:green;">
-        ✅ CI/CD Demo Version 2.0 - Updated on July 2026
-    </h3>
-
-    <marquee behavior="alternate" style="color:blue;">
-        ✈ Have a Safe Journey | Thank You | Visit Again ✈
-    </marquee>
-
-  </div>
-</form>
+</body>
+</html>
