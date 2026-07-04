@@ -1,55 +1,47 @@
 <form action="action_page.php">
   <div class="container">
 
-    <h1>✈ Welcome to Chhatrapati Shivaji Maharaj International Airport, Mumbai</h1>
+    <h1 style="color:darkblue; text-align:center;">
+        ✈ Welcome to Chhatrapati Shivaji Maharaj International Airport - Mumbai
+    </h1>
 
-    <marquee style="color:red;">
-      Welcome to Mumbai International Airport | Safe Journey | Immigration Registration Portal
+    <h2 style="color:red; text-align:center;">
+        🌍 International Passenger Immigration Registration Portal
+    </h2>
+
+    <marquee style="background:yellow; color:red; font-weight:bold;">
+        🔔 Welcome to Mumbai Airport | Please keep your Passport & Visa ready for Verification | Have a Safe Journey ✈
     </marquee>
 
-    <p>Please complete the passenger registration form before entering the immigration counter.</p>
+    <hr>
 
-    <hr><br>
-
-    <label><b>Full Name</b></label>
-    <input type="text" placeholder="Enter Full Name" name="fullname" required><br>
+    <label><b>Passenger Full Name</b></label>
+    <input type="text" placeholder="Enter Full Name" required><br>
 
     <label><b>Father's Name</b></label>
-    <input type="text" placeholder="Enter Father's Name" name="fathername" required><br>
+    <input type="text" placeholder="Enter Father's Name" required><br>
 
     <label><b>Mother's Name</b></label>
-    <input type="text" placeholder="Enter Mother's Name" name="mothername" required><br>
+    <input type="text" placeholder="Enter Mother's Name" required><br>
 
     <label><b>Date of Birth</b></label>
-    <input type="date" name="dob" required><br>
+    <input type="date" required><br>
 
     <label><b>Gender</b></label>
-    <select required>
+    <select>
         <option>Male</option>
         <option>Female</option>
         <option>Other</option>
     </select><br><br>
 
     <label><b>Nationality</b></label>
-    <select required>
-        <option>Indian</option>
-        <option>USA</option>
-        <option>UK</option>
-        <option>Canada</option>
-        <option>Australia</option>
-        <option>Germany</option>
-        <option>Japan</option>
-        <option>Other</option>
-    </select><br><br>
+    <input type="text" placeholder="Enter Nationality" required><br>
 
     <label><b>Passport Number</b></label>
     <input type="text" placeholder="Enter Passport Number" required><br>
 
     <label><b>Visa Number</b></label>
     <input type="text" placeholder="Enter Visa Number" required><br>
-
-    <label><b>Passport Expiry Date</b></label>
-    <input type="date" required><br>
 
     <label><b>Flight Number</b></label>
     <input type="text" placeholder="AI-302" required><br>
@@ -62,37 +54,36 @@
 
     <label><b>Terminal</b></label>
     <select>
-        <option>Terminal 1</option>
-        <option>Terminal 2</option>
+        <option>T1</option>
+        <option>T2</option>
     </select><br><br>
 
     <label><b>Seat Number</b></label>
     <input type="text" placeholder="12A" required><br>
 
-    <label><b>Baggage Count</b></label>
-    <input type="number" min="0" max="10" required><br>
+    <label><b>Baggage Weight (KG)</b></label>
+    <input type="number" placeholder="20" required><br>
 
     <label><b>Mobile Number</b></label>
     <input type="tel" placeholder="+91 XXXXXXXXXX" required><br>
 
     <label><b>Email Address</b></label>
-    <input type="email" placeholder="Enter Email" required><br>
+    <input type="email" placeholder="Enter Email Address" required><br>
 
     <label><b>Purpose of Visit</b></label>
     <select>
         <option>Tourism</option>
         <option>Business</option>
-        <option>Employment</option>
-        <option>Education</option>
         <option>Medical</option>
-        <option>Transit</option>
+        <option>Education</option>
+        <option>Employment</option>
     </select><br><br>
 
-    <label><b>Address in India</b></label>
-    <textarea rows="4" cols="50" placeholder="Enter Complete Address"></textarea><br><br>
+    <label><b>Hotel / Local Address</b></label>
+    <textarea rows="4" cols="40" placeholder="Enter Address"></textarea><br><br>
 
     <label><b>Emergency Contact Number</b></label>
-    <input type="tel" placeholder="+91 XXXXXXXXXX" required><br>
+    <input type="tel" placeholder="+91 XXXXXXXXXX"><br>
 
     <label><b>Upload Passport Copy</b></label>
     <input type="file"><br><br>
@@ -101,45 +92,41 @@
     <input type="file"><br><br>
 
     <input type="checkbox" required>
-    I confirm that all the information provided above is true and correct.
+    I declare that all the above information is true.
 
     <br><br>
 
-    <button type="submit" class="registerbtn">✈ Submit Registration</button>
+    <button type="submit">🛫 Submit Registration</button>
     <button type="reset">Reset Form</button>
 
-  </div>
+    <hr>
 
-  <div class="container signin">
+    <h2 style="color:green;">⭐ Airport Premium Services ⭐</h2>
 
-      <hr>
+    <ul>
+        <li>🛄 Smart Baggage Tracking</li>
+        <li>☕ Premium Lounge Access</li>
+        <li>📶 Unlimited Free Wi-Fi</li>
+        <li>🚖 Airport Taxi Booking</li>
+        <li>💱 Currency Exchange Counter</li>
+        <li>🛍️ Duty Free Shopping</li>
+        <li>🍽️ Food Court & Restaurants</li>
+        <li>🩺 24x7 Medical Assistance</li>
+    </ul>
 
-      <h3>Airport Facilities</h3>
+    <hr>
 
-      <ul>
-        <li>🛫 Free Wi-Fi</li>
-        <li>☕ Cafeteria & Restaurants</li>
-        <li>💱 Currency Exchange</li>
-        <li>🚕 Taxi Service</li>
-        <li>🛄 Baggage Assistance</li>
-        <li>🏨 Airport Lounge</li>
-      </ul>
+    <h2 style="color:purple;">
+        🎉 Thank You for Visiting Mumbai International Airport 🎉
+    </h2>
 
-      <hr>
+    <h3 style="color:green;">
+        ✅ CI/CD Demo Version 2.0 - Updated on July 2026
+    </h3>
 
-      <h3>Emergency Contact</h3>
-
-      <p>📞 Help Desk : +91-22-66851010</p>
-      <p>📧 support@mumbaiairport.com</p>
-
-      <h2 style="color:green;">
-      ✔ Thank You for Choosing Mumbai International Airport.
-      </h2>
-
-      <marquee behavior="alternate">
-      ✈ Have a Pleasant Journey ✈
-      </marquee>
+    <marquee behavior="alternate" style="color:blue;">
+        ✈ Have a Safe Journey | Thank You | Visit Again ✈
+    </marquee>
 
   </div>
-
 </form>
