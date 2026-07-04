@@ -1,36 +1,46 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>Election Commission Registration Portall</h1>
-    <p>Please enter your information carefully. All submitted details will be used for voter registration.!!!</p>
+    <h1>Welcome to Mumbai International Airport</h1>
+    <p>Please enter your travel details carefully. These details are required for passenger verification.</p>
     <hr>
-    <br>  
-
-
-    <label for="name"><b>Name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" id="name" required>
     <br>
 
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <label for="fullname"><b>Full Name</b></label>
+    <input type="text" placeholder="Enter Full Name" name="fullname" id="fullname" required>
     <br>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <label for="fathername"><b>Father's Name</b></label>
+    <input type="text" placeholder="Enter Father's Name" name="fathername" id="fathername" required>
     <br>
 
-    <label for="mother name"><b>Email</b></label>
-    <input type="mother name" placeholder="enter name" name="name" id="name" required>
+    <label for="mothername"><b>Mother's Name</b></label>
+    <input type="text" placeholder="Enter Mother's Name" name="mothername" id="mothername" required>
     <br>
 
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <label for="passport"><b>Passport Number</b></label>
+    <input type="text" placeholder="Enter Passport Number" name="passport" id="passport" required>
     <br>
-    <button type="submit" class="registerbtn">Register</button>
+
+    <label for="visa"><b>Visa Number</b></label>
+    <input type="text" placeholder="Enter Visa Number" name="visa" id="visa" required>
+    <br>
+
+    <label for="nationality"><b>Nationality</b></label>
+    <input type="text" placeholder="Enter Nationality" name="nationality" id="nationality" required>
+    <br>
+
+    <label for="arrival"><b>Arrival Flight Number</b></label>
+    <input type="text" placeholder="Enter Flight Number" name="arrival" id="arrival" required>
+    <br>
+
+    <label for="email"><b>Email Address</b></label>
+    <input type="email" placeholder="Enter Email Address" name="email" id="email" required>
+    <br>
+
+    <button type="submit" class="registerbtn">Submit Details</button>
   </div>
 
   <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
+    <p>Thank you for choosing Mumbai International Airport. Have a pleasant stay!</p>
   </div>
 </form>
